@@ -12,7 +12,7 @@ body {
 
 .container {
   width: 90%;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   text-align: justify;
 }
@@ -45,8 +45,8 @@ header {
 }
 
 header h1 {
-  font-size: 30px;
-  line-height: 1.5;
+  font-size: 40px;
+  line-height: 1.8;
   margin: 0 0 0 -40px;
   font-weight: bold;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
@@ -60,13 +60,13 @@ header h1 {
 
 header h1:before {
   content: "./ ";
-  font-size: 24px;
+  font-size: 44px;
 }
 
 header h2 {
   font-size: 18px;
   font-weight: 300;
-  color: #666;
+  color: #758;
 }
 
 #downloads .btn {
@@ -194,13 +194,13 @@ hr {
   background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.3), rgba(35, 35, 35, 0.3) 50%, rgba(10, 10, 10, 0.3) 50%, rgba(0, 0, 0, 0.3));
   padding: 8px 18px;
   border-radius: 50px;
-  border: 2px solid rgba(0, 0, 0, 0.7);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.7);
-  border-top: 2px solid rgba(0, 0, 0, 1);
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+  border-top: 1px solid rgba(0, 0, 0, 1);
   color: rgba(255, 255, 255, 0.8);
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 15px;
   text-decoration: none;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -208,19 +208,6 @@ hr {
 
 .btn:hover {
   background: -webkit-linear-gradient(top, rgba(40, 40, 40, 0.6), rgba(35, 35, 35, 0.6) 50%, rgba(10, 10, 10, 0.8) 50%, rgba(0, 0, 0, 0.8));
-}
-
-.btn .icon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin: 1px 8px 0 0;
-  float: left;
-}
-
-.btn-github .icon {
-  opacity: 0.6;
-  background: url("../images/blacktocat.png") 0 0 no-repeat;
 }
 
 /* Links
