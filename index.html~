@@ -84,7 +84,7 @@
         <p>Here, basically the borders and backgrounds should be the same as for the navigation toolbar buttons. The styling for :hover and [open="true"] states of the bookmarks toolbar items looks inconsistent with the remaining theme and is outdated. I need to update these to match the appearance of other buttons on the nav-bar. In short I am going to use Australis button styling for bookmarks toolbar items. 
         Please note that- Australis is basically just a codename for the current styling of the toolbars in Firefox.</p>
 
-        <h3>Every issue has a solution</h3>
-        <p></p> 
+        <h3>Every issue have a solution</h3>
+        <p>So here, </p> 
     </body>
 </html>
