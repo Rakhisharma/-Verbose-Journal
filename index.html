@@ -78,13 +78,42 @@
 </div>
   </section>
   <div class="container">
-        <h1>Bookmark in toolbar </h1><section id="main_content">
-        <p>So, Today let's talk about Bookmark issue in toolbar as that is what I have been up to the past couple of weeks along with some other issues. Yes, I know I should have write about it 2 weeks ago but I was kind of busy with some stuffs along with my internship.😦 That’s why didn’t find time to dedicate a proper blog to my work. In this blog I will write about Bookmark issue in toolbar and some interesting things I encountered while working with it. </p>
-        <h3>What the exactly issue is:</h3>
-        <p>Here, basically the borders and backgrounds should be the same as for the navigation toolbar buttons. The styling for :hover and [open="true"] states of the bookmarks toolbar items looks inconsistent with the remaining theme and is outdated. I need to update these to match the appearance of other buttons on the nav-bar. In short I am going to use Australis button styling for bookmarks toolbar items. 
-        Please note that- Australis is basically just a codename for the current styling of the toolbars in Firefox.</p>
+        <h1>Bookmark in Firefox </h1><section id="main_content">
+        <p style="text-align:justify;">So, Today let's talk about Bookmark issue in toolbar as that is what I have been up to the past couple of weeks along with some other issues. Yes, I know I should have write about it 2 weeks ago but I was kind of busy with some stuffs along with my internship :( That’s why didn’t find time to dedicate a prop er blog to my work. In this blog, I will write about Bookmark issue in toolbar and some interesting things I encountered while working with it. I will be writing two or three blog one by one :)</p>
 
-        <h3>Every issue has a solution</h3>
+<h3 style="text-align:justify;">What  exactly the issue is?</h3>
+<p style="text-align:justify;">Here basically, the borders and backgrounds should be the same as for the navigation toolbar buttons. The styling for  :hover and [open="true"] states of the bookmarks toolbar items looks inconsistent with the remaining theme and is outdated.</p>
+  <center> <img class="alignnone size-full wp-image-190" src="https://rakhish.files.wordpress.com/2016/07/bookmark.png" alt="bookmark" width="140" height="119" /></center>
+<p style="text-align:justify;">See how bookmark button in toolbar currently looks like.   It shouldn't be like that. It should match the styling of buttons in nav-bar. Something like the  image below.</p>
+
+  <center> <img class="alignnone size-full wp-image-193" src="https://rakhish.files.wordpress.com/2016/07/bookmark2.png" alt="bookmark2" width="62" height="59" /></center>
+<p style="text-align:justify;">The bookmark button  needs to update  to match the appearance of other buttons on the nav-bar. In short,  I am going to use Australis button styling for bookmarks toolbar items. Please note that- Australis is basically just a codename for the current styling of the toolbars in Firefox.</p>
+
+<h3 style="text-align:justify;">Every issue has a solution, right?</h3>
+<strong><p style="text-align:justify;">toolbarbutton.bookmark-item:not(.subviewbutton) {
+</p><p>-moz-appearance: none;
+</p><p>border: 1px  solid transparent;
+</p><p>border-radius: 2px;
+</p><p>transition-property: background-color, border-color ;
+</p><p>transition-duration: 150ms;
+}</p></strong>
+<p style="text-align:justify;">This rule is going to set the appearance, border and border-radius of the button. Adding   :not() to the rule, so that it won't affect the bookmarks menu .</p>
+</p>
+<strong><p>
+toolbarbutton.bookmark-item:not(.subviewbutton):hover {
+<p>background-color: var(--toolbarbutton-hover-background);
+</p><p>border-color: var(--toolbarbutton-hover-bordercolor);
+}</p></strong>
+<strong><p style="text-align:justify;">
+toolbarbutton.bookmark-item:not(.subviewbutton):hover:active,
+</p><p>toolbarbutton.bookmark-item[open="true"] {
+</p><p>background: var(--toolbarbutton-active-background);
+</p><p>box-shadow: var(--toolbarbutton-active-boxshadow);
+</p><p>border-color: var(--toolbarbutton-active-bordercolor);
+}</p></strong>
+
+<p >So,  this is for hover effect on button, putting   background color and border color make it look similar to the buttons of nav-bar. Similarly, the  :active rule applies when the button is clicked i.e open.</p>
+<p >This Fix is only for Linux i.e this will affect the firefox for Linux platform. As I have ubuntu in my system -the only platform available for testing :)</p>
         <p></p> 
     </body>
 </html>
